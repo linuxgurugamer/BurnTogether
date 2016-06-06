@@ -96,7 +96,7 @@ namespace BurnTogether
 		{
 			var centerOfMass = vessel.findWorldCenterOfMass();
 			var momentOfInertia = vessel.findLocalMOI(centerOfMass);
-			var angularVelocity = Quaternion.Inverse(vessel.ReferenceTransform.rotation) * vessel.rigidbody.angularVelocity;
+			var angularVelocity = Quaternion.Inverse(vessel.ReferenceTransform.rotation) * vessel.rootPart.rb.angularVelocity;
 			var angularMomentum = new Vector3d(angularVelocity.x * momentOfInertia.x, angularVelocity.y * momentOfInertia.y, angularVelocity.z * momentOfInertia.z);
 			
 			var retVar = Vector3d.Scale
