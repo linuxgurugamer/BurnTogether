@@ -1,0 +1,6 @@
+Changelog
+
+	Added AssemblyVersion.tt
+	Added InstallChecker.cs
+	Reorganized Directories
+	
